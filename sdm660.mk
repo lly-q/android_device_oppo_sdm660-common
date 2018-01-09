@@ -28,5 +28,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/oppo/sdm660-common/sdm660-common-vendor.mk)
