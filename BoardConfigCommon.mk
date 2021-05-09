@@ -68,7 +68,7 @@ TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 3
 
 # Inherit the proprietary files
 include vendor/oppo/sdm660-common/BoardConfigVendor.mk
