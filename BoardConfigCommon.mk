@@ -82,5 +82,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # Inherit the proprietary files
 include vendor/oppo/sdm660-common/BoardConfigVendor.mk
