@@ -67,6 +67,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+
 
 # Inherit the proprietary files
 include vendor/oppo/sdm660-common/BoardConfigVendor.mk
