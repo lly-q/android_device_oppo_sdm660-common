@@ -38,6 +38,19 @@ TARGET_USES_ION := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    libwpa_client \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
+    WifiResCommon \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
