@@ -85,5 +85,9 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
+
 # Inherit the proprietary files
 include vendor/oppo/sdm660-common/BoardConfigVendor.mk
