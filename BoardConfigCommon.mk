@@ -91,7 +91,7 @@ TARGET_KERNEL_CONFIG := lineageos_r11s_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Partitions
