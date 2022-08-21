@@ -6,9 +6,6 @@
 
 COMMON_PATH := device/oppo/sdm660-common
 
-# Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
@@ -48,6 +45,13 @@ TARGET_KERNEL_SOURCE := kernel/oppo/sdm660
 TARGET_KERNEL_CONFIG := lineageos_r11s_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
+# Properties
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -67,7 +71,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
